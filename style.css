@@ -1,0 +1,853 @@
+/* 1. Basic Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #f5f8ff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* 2. Header Design */
+.site-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+/* 3. Logo */
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #163b70;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #1685e8;
+}
+
+/* 4. Navigation Menu */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-menu a {
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #1685e8;
+}
+
+/* 5. Login and Signup Buttons */
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-buttons button {
+    padding: 11px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn {
+    background: white;
+    color: #1685e8;
+    border: 1px solid #1685e8;
+}
+
+.login-btn:hover {
+    background: #edf6ff;
+}
+
+.signup-btn {
+    background: #1685e8;
+    color: white;
+    border: 1px solid #1685e8;
+}
+
+.signup-btn:hover {
+    background: #0968bd;
+}
+
+/* 6. Temporary Welcome Section */
+.welcome-section {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.welcome-section h1 {
+    font-size: 38px;
+    color: #163b70;
+    margin-bottom: 15px;
+}
+
+.welcome-section p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* 7. Mobile Responsive Design */
+@media (max-width: 850px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 18px 0;
+    }
+
+    .nav-menu {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .nav-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-menu a {
+        font-size: 13px;
+    }
+
+    .nav-buttons button {
+        padding: 9px 15px;
+    }
+
+    .welcome-section h1 {
+        font-size: 28px;
+    }
+}
+
+/* HERO BANNER */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 35px;
+    padding: 60px 5%;
+    min-height: 440px;
+    overflow: hidden;
+    background: linear-gradient(
+        120deg,
+        #f4f9ff,
+        #e4f1ff
+    );
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.hero-tag {
+    display: inline-block;
+    background: #dcecff;
+    color: #0066d9;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 3.2vw, 46px);
+    line-height: 1.2;
+    color: #10234c;
+    margin-bottom: 18px;
+}
+
+.hero h1 span {
+    color: #0878ed;
+}
+
+.hero-content p {
+    color: #425675;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #0878ed;
+    color: white;
+    border: 1px solid #0878ed;
+}
+
+.primary-btn:hover {
+    background: #075fc0;
+}
+
+.secondary-btn {
+    background: white;
+    color: #0878ed;
+    border: 1px solid #0878ed;
+}
+
+.secondary-btn:hover {
+    background: #e6f2ff;
+}
+
+.hero-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    color: #344e70;
+    font-size: 12px;
+}
+
+.hero-image {
+    min-width: 0;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(30, 90, 150, 0.15);
+}
+
+/* TABLET AND MOBILE */
+@media (max-width: 850px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 40px 5%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 30px 5%;
+        gap: 25px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero-image img {
+        height: 220px;
+        border-radius: 16px;
+    }
+
+    .hero-features {
+        gap: 12px;
+    }
+}
+
+/* POPULAR COURSES SECTION */
+.courses-section {
+    padding: 40px 5%;
+    background: #ffffff;
+}
+
+/* Section heading */
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: 27px;
+    color: #10234c;
+    margin-bottom: 10px;
+}
+
+.heading-line {
+    display: block;
+    width: 42px;
+    height: 3px;
+    background: #0878ed;
+    border-radius: 5px;
+}
+
+.view-all {
+    color: #0878ed;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.view-all:hover {
+    text-decoration: underline;
+}
+
+/* Four course cards */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Individual card */
+.course-card {
+    border: 1px solid #e1eaf5;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 3px 12px rgba(25, 70, 120, 0.04);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(25, 70, 120, 0.12);
+}
+
+/* Course image */
+.course-image {
+    width: 100%;
+    height: 135px;
+    display: block;
+    object-fit: cover;
+    background: #eaf3ff;
+}
+
+/* Card text */
+.course-info {
+    padding: 16px;
+}
+
+.course-info h3 {
+    font-size: 18px;
+    color: #10234c;
+    margin-bottom: 10px;
+}
+
+.course-info p {
+    color: #526580;
+    font-size: 13px;
+    line-height: 1.7;
+    min-height: 44px;
+    margin-bottom: 15px;
+}
+
+/* Duration and level */
+.course-meta {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-top: 1px solid #edf1f6;
+    padding-top: 12px;
+    margin-bottom: 15px;
+}
+
+.course-meta span {
+    font-size: 12px;
+    color: #526580;
+}
+
+/* Learn More button */
+.learn-btn {
+    display: block;
+    text-align: center;
+    padding: 11px 10px;
+    border-radius: 5px;
+    background: #0878ed;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.learn-btn:hover {
+    background: #075fc0;
+}
+
+/* Responsive layout */
+@media (max-width: 1000px) {
+    .courses-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .courses-section {
+        padding: 30px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 22px;
+    }
+
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-image {
+        height: 190px;
+    }
+}
+
+/* WHY CHOOSE MY WEBSITE */
+.why-section {
+    padding: 40px 5%;
+    background: linear-gradient(
+        120deg,
+        #f0f7ff,
+        #ffffff
+    );
+}
+
+.why-section .section-heading {
+    margin-bottom: 30px;
+}
+
+/* Four feature columns */
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* Individual feature */
+.why-card {
+    text-align: center;
+    padding: 10px 12px 15px;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Circular icon */
+.why-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #ffffff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.10);
+}
+
+.blue-icon {
+    background: linear-gradient(135deg, #48a4ff, #0878ed);
+}
+
+.green-icon {
+    background: linear-gradient(135deg, #39d98a, #00a65a);
+}
+
+.purple-icon {
+    background: linear-gradient(135deg, #b16aff, #7738ed);
+}
+
+.red-icon {
+    background: linear-gradient(135deg, #ff7777, #f04444);
+}
+
+/* Feature text */
+.why-card h3 {
+    color: #10234c;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    color: #526580;
+    font-size: 13px;
+    line-height: 1.8;
+    max-width: 230px;
+    margin: auto;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .why-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .why-section {
+        padding: 30px 5%;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .why-icon {
+        width: 64px;
+        height: 64px;
+        font-size: 27px;
+    }
+}
+
+/* ABOUT US SECTION */
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background: #102b49;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.about-image {
+    height: 280px;
+    min-width: 0;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.about-content {
+    padding: 35px 8%;
+}
+
+.about-content h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #e0eaf5;
+    margin-bottom: 12px;
+}
+
+.about-btn {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 12px 20px;
+    background: #0878ed;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.about-btn:hover {
+    background: #0964c4;
+}
+
+/* ABOUT SECTION ON MOBILE */
+@media (max-width: 700px) {
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        height: 220px;
+    }
+
+    .about-content {
+        padding: 30px 6%;
+    }
+}
+
+/* WEBSITE FOOTER */
+.site-footer {
+    background: #0b2038;
+    color: #ffffff;
+    padding: 25px 5% 15px;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding-bottom: 22px;
+}
+
+.footer-logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.footer-logo span {
+    color: #43a0ff;
+}
+
+.footer-brand p {
+    color: #c0d0e3;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #e0eaf5;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: #43a0ff;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    background: #203c5a;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.footer-social a:hover {
+    background: #0878ed;
+}
+
+.footer-bottom {
+    border-top: 1px solid #29425e;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #bdcce0;
+    font-size: 12px;
+}
+
+/* FOOTER ON MOBILE */
+@media (max-width: 700px) {
+    .footer-main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        gap: 14px;
+    }
+}
+
+/* RESPONSIVE NAVIGATION MENU */
+
+/* Desktop: hide hamburger */
+.menu-toggle {
+    display:flexbox ;
+    border: 1px solid #d8e6f7;
+    background: #ffffff;
+    color: #163b70;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Tablet and mobile */
+@media (max-width: 850px) {
+    .navbar {
+        width: 92%;
+        min-height: 70px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+        order: 3;
+        background: #f4f8ff;
+        border-radius: 8px;
+        padding: 8px 12px;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 12px;
+        border-bottom: 1px solid #e0eaf5;
+    }
+
+    .nav-menu a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-buttons {
+        order: 4;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Hero section */
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 35px 5%;
+    }
+
+    .hero-image img {
+        height: 280px;
+    }
+
+    /* Course cards */
+    .courses-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Features */
+    .why-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 520px) {
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-buttons button {
+        padding: 10px 16px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero-image img {
+        height: 220px;
+    }
+
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-image {
+        height: 190px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 22px;
+    }
+
+    .view-all {
+        font-size: 12px;
+    }
+
+    .footer-links {
+        gap: 12px;
+    }
+}
+

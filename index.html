@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+</head>
+
+<script src="js2.js"></script>
+
+<body>
+    <header class="site-header">
+        <div class="container navbar">
+
+            <a href="#" class="logo">
+                My<span>Website</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="navMenu" onclick="togal()">
+                ☰
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="active">Home</a>
+                <a href="#courses">Courses</a>
+                <a href="#about-us">About Us</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+
+            <div class="nav-buttons">
+                <button class="login-btn" type="button">
+                    Login
+                </button>
+                <button class="signup-btn" type="button">
+                    Sign Up
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <main id="home">
+
+        <main>
+            <section class="hero" id="home">
+
+                <div class="hero-content">
+                    <span class="hero-tag">
+                        Learn • Grow • Build Your Future
+                    </span>
+
+                    <h1>
+                        Best Computer Courses
+                        for a <span>Brighter Future</span>
+                    </h1>
+
+                    <p>
+                        Learn in-demand computer skills with expert guidance.
+                        Build your career with practical training and
+                        hands-on experience.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#courses" class="primary-btn">
+                            Explore Courses &rarr;
+                        </a>
+
+                        <a href="#about" class="secondary-btn">
+                            Get Started
+                        </a>
+                    </div>
+
+                    <div class="hero-features">
+                        <span>👨‍🏫 Expert Trainers</span>
+                        <span>▶ Live Classes</span>
+                        <span>🏆 Certification</span>
+                        <span>∞ Lifetime Access</span>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=85"
+                        alt="Laptop displaying computer programming code">
+                </div>
+
+            </section>
+
+            <!-- POPULAR COURSES SECTION -->
+            <section class="courses-section" id="courses">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Popular Courses</h2>
+                        <span class="heading-line"></span>
+                    </div>
+
+                    <a href="#courses" class="view-all">
+                        View All Courses &rarr;
+                    </a>
+                </div>
+
+                <div class="courses-grid">
+
+                    <!-- Course 1 -->
+                    <div class="course-card">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80"
+                            alt="Computer learning" class="course-image">
+
+                        <div class="course-info">
+                            <h3>Basic Computer</h3>
+                            <p>Learn computer basics from scratch. Perfect for beginners.</p>
+
+                            <div class="course-meta">
+                                <span>◷ 3 Months</span>
+                                <span>▥ Beginner</span>
+                            </div>
+
+                            <a href="#contact" class="learn-btn">Learn More</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 2 -->
+                    <div class="course-card">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80"
+                            alt="Office work and productivity" class="course-image">
+
+                        <div class="course-info">
+                            <h3>MS Office</h3>
+                            <p>Master Word, Excel, PowerPoint and other office tools.</p>
+
+                            <div class="course-meta">
+                                <span>◷ 2 Months</span>
+                                <span>▥ Beginner</span>
+                            </div>
+
+                            <a href="#contact" class="learn-btn">Learn More</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 3 -->
+                    <div class="course-card">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80"
+                            alt="Web development on a laptop" class="course-image">
+
+                        <div class="course-info">
+                            <h3>Web Development</h3>
+                            <p>Learn HTML, CSS, JavaScript and build real websites.</p>
+
+                            <div class="course-meta">
+                                <span>◷ 6 Months</span>
+                                <span>▥ Intermediate</span>
+                            </div>
+
+                            <a href="#contact" class="learn-btn">Learn More</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 4 -->
+                    <div class="course-card">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80"
+                            alt="Accounting and financial records" class="course-image">
+
+                        <div class="course-info">
+                            <h3>Tally with GST</h3>
+                            <p>Learn accounting, GST and business transactions.</p>
+
+                            <div class="course-meta">
+                                <span>◷ 3 Months</span>
+                                <span>▥ Beginner</span>
+                            </div>
+
+                            <a href="#contact" class="learn-btn">Learn More</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- WHY CHOOSE US SECTION -->
+            <section class="why-section" id="about">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Why Choose My Website?</h2>
+                        <span class="heading-line"></span>
+                    </div>
+                </div>
+
+                <div class="why-grid">
+
+                    <div class="why-card">
+                        <div class="why-icon blue-icon">🎓</div>
+                        <h3>Quality Education</h3>
+                        <p>
+                            Well-structured courses with
+                            easy learning methods.
+                        </p>
+                    </div>
+
+                    <div class="why-card">
+                        <div class="why-icon green-icon">🎧</div>
+                        <h3>Expert Support</h3>
+                        <p>
+                            Get help from experienced
+                            trainers and mentors.
+                        </p>
+                    </div>
+
+                    <div class="why-card">
+                        <div class="why-icon purple-icon">📅</div>
+                        <h3>Flexible Learning</h3>
+                        <p>
+                            Learn at your own pace,
+                            anytime, anywhere.
+                        </p>
+                    </div>
+
+                    <div class="why-card">
+                        <div class="why-icon red-icon">💼</div>
+                        <h3>Career Support</h3>
+                        <p>
+                            Get guidance for job
+                            and career growth.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ABOUT US SECTION -->
+            <section class="about-section" id="about-us">
+
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85"
+                        alt="Modern office and workspace">
+                </div>
+
+                <div class="about-content">
+                    <h2>About My Website</h2>
+
+                    <p>
+                        My Website is an online learning platform that
+                        helps you build computer skills and achieve your
+                        career goals.
+                    </p>
+
+                    <p>
+                        We provide practical courses, expert guidance
+                        and learning resources to help you grow.
+                    </p>
+
+                    <a href="#courses" class="about-btn">
+                        Learn More &rarr;
+                    </a>
+                </div>
+
+            </section>
+        </main>
+
+    </main>
+
+    </main>
+
+
+    <!-- WEBSITE FOOTER -->
+    <footer class="site-footer" id="contact">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+                <a href="#home" class="footer-logo">
+                    🎓 My <span>Website</span>
+                </a>
+
+                <p>Learn Today, Lead Tomorrow.</p>
+            </div>
+
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="#home">Home</a>
+                <a href="#courses">Courses</a>
+                <a href="#about-us">About Us</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="footer-social">
+                <a href="https://www.facebook.com/" aria-label="Facebook">f</a>
+                <a href="https://www.youtube.com/" aria-label="YouTube">▶</a>
+                <a href="https://www.instagram.com/" aria-label="Instagram">◎</a>
+                <a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 My Website. All rights reserved.</p>
+        </div>
+
+    </footer>
+</body>
+
+</html>
+
+
+
+</body>
+
+</html>
